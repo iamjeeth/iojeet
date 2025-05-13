@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Jeet Bhanushali - Full-stack SEO</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5eeca0a7-96a8-4e16-aec7-bb59d24ee34f" class="page sans"><header><img class="page-cover-image" src="Jeet%20Bhanushali%20-%20Full-stack%20SEO%205eeca0a796a84e16aec7bb59d24ee34f/I_Help_SaaS_Founders_Go_From_10k_MRR_to_500k_MRR_With_SEO_(9).png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Jeet%20Bhanushali%20-%20Full-stack%20SEO%205eeca0a796a84e16aec7bb59d24ee34f/Jeet_DP_(1).png"/></div><h1 class="page-title">Jeet Bhanushali - Full-stack SEO</h1><p class="page-description"></p></header><div class="page-body"><hr id="049966f8-1616-4de5-a0b7-ea5f0f6f8f46"/><p id="80db4df5-2609-484e-81a3-d4afe7b1ec6f" class="">If you are SaaS founder running a $10k MRR product serving SMBs, I am your guy!</p><hr id="137b3c81-4f1e-440e-85f3-3de7bf882375"/><p id="3d7d2dc0-352a-4d1c-baa4-f0c75cbd6b68" class="">Hi, I am Jeet, and I can help you achieve 3 things as a SaaS founder:</p><ul id="f3fd2234-f857-4dec-874d-f5ba8e4f12a2" class="bulleted-list"><li style="list-style-type:disc">Increase your inbound leads 📈</li></ul><ul id="fa2eb713-f2f0-4647-8e0b-f2ab5b2f2983" class="bulleted-list"><li style="list-style-type:disc">Increase organic PLG sales 🤑</li></ul><ul id="0ef30555-1af6-42a3-a961-c3c40c436324" class="bulleted-list"><li style="list-style-type:disc">Become a recognizable brand in your niche 😎</li></ul><blockquote id="7da1cc08-a93e-477c-a323-ce73b5c925e8" class=""><a href="https://calendly.com/jeetb/30min">Get a Free, No-Obligation SEO Strategy Session Today!</a></blockquote><hr id="f9b5bc68-5baf-4c1a-8cb3-ba4cbb1a0662"/><ul id="b2654683-c627-410b-9cdb-e28bc6c6b688" class="bulleted-list"><li style="list-style-type:disc">I have been doing SEO for the past 8 years</li></ul><ul id="f3e0b125-651b-449b-bdd8-693ff66ed21a" class="bulleted-list"><li style="list-style-type:disc">Over the years, I have grown websites from <strong>0 traffic to 6-digit monthly traffic</strong> repeatably</li></ul><ul id="944d5b55-d3cf-4e1b-976b-843e69c4d438" class="bulleted-list"><li style="list-style-type:disc">I have held jobs working in an agency as well as with Brands such as<ul id="134f70ae-5cf7-8068-af2c-ff40351a36c4" class="bulleted-list"><li style="list-style-type:circle"><strong>Global SEO </strong>at adidas</li></ul><ul id="9a030b43-9a2b-4e31-acf4-dd75bb645875" class="bulleted-list"><li style="list-style-type:circle"><strong>Head of Organic Growth</strong> at Woovly (E-commerce Marketplace)</li></ul><ul id="12a871ef-c442-41f2-989c-78baa79452ec" class="bulleted-list"><li style="list-style-type:circle"><strong>Product Growth Manager</strong> at <a href="http://Erase.bg">Erase.bg</a> (SaaS)</li></ul><ul id="b492be76-449c-4122-b757-e71fc25d7203" class="bulleted-list"><li style="list-style-type:circle"><strong>Organic Growth Lead</strong> at MoneyTap (Fintech in the Lending space)</li></ul></li></ul><ul id="a70b676c-27c0-4ba9-bc95-0d3ecda76e4c" class="bulleted-list"><li style="list-style-type:disc">More on my <mark class="highlight-blue"><a href="https://www.linkedin.com/in/iojeet/">LinkedIn</a></mark></li></ul><ul id="e00304f7-86de-4622-9b51-9ec0549f1654" class="bulleted-list"><li style="list-style-type:disc">Basically, my job is to make your traffic growth look something like this, and beyond:<br/><br/></li></ul><figure id="2ecd7fa7-4a71-485a-a74c-232c2ca01efc" class="image"><a href="Jeet%20Bhanushali%20-%20Full-stack%20SEO%205eeca0a796a84e16aec7bb59d24ee34f/Upwards_trending_SaaS_growth_graph_(1).png"><img style="width:708px" src="Jeet%20Bhanushali%20-%20Full-stack%20SEO%205eeca0a796a84e16aec7bb59d24ee34f/Upwards_trending_SaaS_growth_graph_(1).png"/></a></figure><hr id="d912bc1f-8258-4db0-a418-df96222c16ea"/><h2 id="d0e7b882-8e6d-4603-8b32-30e6418c0986" class="">Projects I have worked on:</h2><ul id="4fa5c140-65d9-43cb-b844-05c4a9bb88cf" class="bulleted-list"><li style="list-style-type:disc">GyanApp (0 to 500k/month traffic in 6 months)</li></ul><ul id="15aff30a-9cbb-4e6e-8567-73f7c52da3f6" class="bulleted-list"><li style="list-style-type:disc"><a href="http://Erase.bg">Erase.bg</a> (0 to 12k/month traffic in 7 months)</li></ul><ul id="fc53b6aa-3e68-4031-93bb-02617c57dc49" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.moneytap.com/">MoneyTap</a> (40k to 200k traffic in 10 months)</li></ul><p id="b596e4eb-7d03-4c57-bd2e-9fda7df20e8c" class=""> </p><p id="fede946a-7d57-455c-8369-32c55d4ce6bc" class="">In addition to this, I have worked on over 10+ websites for an extended period, including brands like:</p><ul id="d4481b84-c850-4bfc-978a-8fb3ba3000ca" class="bulleted-list"><li style="list-style-type:disc"><a href="https://lbb.in/">LBB</a></li></ul><ul id="6935a09c-69ae-460e-8916-b612d7b2b7b1" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.angelone.in/">AngeOne</a> (Previously AngelBroking)</li></ul><ul id="ad55948a-16e3-4fef-baf5-c71b76fc774f" class="bulleted-list"><li style="list-style-type:disc">NeoStencil (Acquired by Unacademy)</li></ul><ul id="10e7282c-9d8e-4551-8207-7050bfa0e27a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.oorjan.com/">Oorjan</a> </li></ul><ul id="9aae4903-cc20-4f6c-a4b3-d93432b4d940" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.multibhashi.com/">MultiBhashi</a></li></ul><ul id="64f7f704-1005-47d4-ad0e-5d1b6fa122fe" class="bulleted-list"><li style="list-style-type:disc"><a href="https://thrillbear.com/">ThrillBear</a> (My very own Adventure Travel Website)</li></ul><hr id="a749e435-e4b1-4a8c-8994-5581837dd29a"/><h2 id="a276f779-de44-4768-a008-d8efbe594fbd" class="">Services I offer</h2><h3 id="92c9a59e-30e9-4c97-957c-b5db51db4583" class="">Content Strategy &amp; Management</h3><ul id="0c80759e-07af-4e76-be22-7062a17ccf0d" class="bulleted-list"><li style="list-style-type:disc">SEO in 2024 is very different from when I started doing it in 2016</li></ul><ul id="7b8db931-25e9-490f-8f28-9afb8bc3d7c2" class="bulleted-list"><li style="list-style-type:disc">You cannot simply download a bunch of keywords from Ahrefs, cluster them, and start working on the highest-volume keywords</li></ul><ul id="8d9ca518-93eb-421b-a844-5fb4f1bd4508" class="bulleted-list"><li style="list-style-type:disc">Content strategy in 2024 has to be very nuanced</li></ul><ul id="bac1294c-e842-433b-ba7f-16aa52e81081" class="bulleted-list"><li style="list-style-type:disc">I will create a content plan that will cover the TOFu and BOFu stages of your user’s journey where you can start ranking within as early as 3-4 months</li></ul><ul id="35c55979-1cd5-42dc-a2f7-8602e1070655" class="bulleted-list"><li style="list-style-type:disc">Either my in-house writers create this content (and take assistance from your team to get expert data) or we hire external subject matter experts</li></ul><blockquote id="add8fe83-febb-4516-aacf-c12ccb43de60" class=""><a href="https://calendly.com/jeetb/30min">Get a Free, No-Obligation SEO Strategy Session Today!</a></blockquote><h3 id="70a36eba-94fe-4cc9-9f5e-a8226c294986" class="">360° SEO Strategy</h3><ul id="18e0e107-f7d0-401e-8b13-67ba8671f33d" class="bulleted-list"><li style="list-style-type:disc">I will audit your website based on the following parameters:<ul id="14cacf0c-7ad8-4303-9961-007b22549c29" class="bulleted-list"><li style="list-style-type:circle">Crawling</li></ul><ul id="6a77024a-aac9-4f7f-9df2-0d86a7d96989" class="bulleted-list"><li style="list-style-type:circle">Indexing</li></ul><ul id="208296cf-ff26-4a89-9065-9a5f9fe1c9d4" class="bulleted-list"><li style="list-style-type:circle">Page speed</li></ul><ul id="ad854702-adaa-4b63-a79f-bf443ef8a512" class="bulleted-list"><li style="list-style-type:circle">Content (EEAT Compliant)</li></ul><ul id="87c7f551-7b19-4147-b6e6-90e18d0a5083" class="bulleted-list"><li style="list-style-type:circle">Link profile</li></ul></li></ul><ul id="4309e3e2-567b-495e-b48c-ebe453800b7a" class="bulleted-list"><li style="list-style-type:disc">Based on the results, we come up with an execution plan and work with your product and tech teams to implement technical changes</li></ul><ul id="1d238f93-c423-4a14-ab1a-bc63a70e08b5" class="bulleted-list"><li style="list-style-type:disc">I will never recommend a technical change unless I am fairly confident that it will get you results</li></ul><blockquote id="ebbe6607-4dce-4cd1-9547-69cf7ed64ba6" class=""><a href="https://calendly.com/jeetb/30min">Get a Free, No-Obligation SEO Strategy Session Today!</a></blockquote><hr id="f825c79e-b0ab-4696-ad26-4da93301d3a4"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">What makes your SEO service unique?</summary><div class="indented"><ul id="ee231e6a-8562-4b62-8a64-204b32cc95f6" class="bulleted-list"><li style="list-style-type:disc">I have worked with SaaS startups as a full-time employee and understand how to work with the tech and product teams. I understand your goals are never based on traffic but on traffic that captures attention across all funnel stages.</li></ul><ul id="c51a558c-3fd1-472c-b14e-328b1e04f8d9" class="bulleted-list"><li style="list-style-type:disc">I leverage the power of programmatic SEO and generative AI content so you do not have to wait for a year before you see any results<ul id="174eac08-a6d4-424f-bab5-721498f3e070" class="bulleted-list"><li style="list-style-type:circle">This is done while making sure the content is valuable for the readers and follows the EEAT guidelines </li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Why should I work with you instead of hiring a full-time employee?</summary><div class="indented"><ul id="99104758-6584-4c5a-adf1-688b04db4bd2" class="bulleted-list"><li style="list-style-type:disc">Finding a full-time employee takes at least 12 weeks (plus another 4 weeks of their notice period)</li></ul><ul id="c1018fea-3e3f-40e7-beb8-150e8c443e3b" class="bulleted-list"><li style="list-style-type:disc">You can hire me at the cost of hiring a junior SEO employee but with 7x more experience</li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Why should I work with you instead of hiring a full-service agency?</summary><div class="indented"><ul id="8ef8d611-4fbf-43ab-9b39-0463697f2ffe" class="bulleted-list"><li style="list-style-type:disc">I have worked as an employee within the SaaS ecosystem — nobody understands the pressures and challenges better</li></ul><ul id="b8e7ad09-2268-40c3-aa59-d47467a4486e" class="bulleted-list"><li style="list-style-type:disc">I have a fair idea of how to work with the tech and product teams to get things shipped in a timely manner</li></ul><ul id="86553755-09f5-453e-8050-92825ae9b944" class="bulleted-list"><li style="list-style-type:disc">You will be my star client if we are doing over $1000/mo business together - you will be just one of the many clients for an agency even if you pay them $5000/mo </li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">What are your pricing options, and how do they compare to hiring an in-house employee or an agency?</summary><div class="indented"><ul id="fc6a7986-abb1-4ebf-920d-20a6addf454e" class="bulleted-list"><li style="list-style-type:disc">I prefer working on a monthly retainer basis</li></ul><ul id="abf8cc12-a2b3-4061-bf00-94cd578cf120" class="bulleted-list"><li style="list-style-type:disc">A good SEO agency will cost you anywhere between $3000-$5000 monthly</li></ul><ul id="85b0e0e4-2572-4937-86b2-98e6aed7a780" class="bulleted-list"><li style="list-style-type:disc">A full-time employee with over 6-7 years of rich experience will cost you anywhere between $4000-$6000 per month</li></ul><ul id="62d714de-a120-4b7f-9ae5-b21d398f1683" class="bulleted-list"><li style="list-style-type:disc">How much I will charge you will totally depend on the project requirements and scope of work but it will definitely be much less than hiring an agency or a full-time employee</li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Book a discovery call</summary><div class="indented"><p id="672596f5-9c20-4cb8-a33c-8c434d6a3cd5" class="">
+</p><figure id="1b641528-c707-4988-9f75-b8dba9f9785e"><div class="source"><a href="https://calendly.com/jeetb/30min">https://calendly.com/jeetb/30min</a></div></figure></div></details><hr id="1c9f70ae-5cf7-80f5-adcc-df14994c25d0"/><p id="1c9f70ae-5cf7-809a-94ab-f3bf08daf7bf" class="">Other Services:</p><figure id="1c9f70ae-5cf7-80ea-baf7-f9b70be8d666" class="link-to-page"><a href="Jeet%20Bhanushali%20-%20Full-stack%20SEO%205eeca0a796a84e16aec7bb59d24ee34f/Mini%20Launch%20Accelerator%201c9f70ae5cf780eabaf7f9b70be8d666.html"><span class="icon">🚀</span>Mini Launch Accelerator</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
